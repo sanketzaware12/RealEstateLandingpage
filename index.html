@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nivaas Property Advisors | Buy, Sell and Rent Property in Pune</title>
+  <meta name="description" content="One-on-one guidance for buying, selling and renting property in Pune, Wakad, Tathawade, Hinjawadi and Punawale.">
+  <meta name="theme-color" content="#14463C">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN (development / prototype). See README notes for a production build. -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="tailwind-config.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-mist font-sans text-ink antialiased">
+  <a href="#home" class="skip-link">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="site-header" class="site-header fixed inset-x-0 top-0 z-50">
+    <span class="scroll-progress" aria-hidden="true"></span>
+    <nav class="mx-auto flex h-[64px] max-w-7xl items-center justify-between px-5 sm:px-8" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-2.5" aria-label="Nivaas Property Advisors, home">
+        <span class="brand-mark flex h-10 w-10 items-center justify-center rounded-xl bg-pine text-white">
+          <i data-lucide="house" class="h-5 w-5"></i>
+        </span>
+        <span class="font-display text-lg font-semibold leading-none tracking-tight">Nivaas
+          <span class="block pt-1 text-[11px] font-medium tracking-wide text-ink/60">Property Advisors</span>
+        </span>
+      </a>
+
+      <ul class="nav-list hidden items-center gap-1 lg:flex">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#properties" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" data-whatsapp class="btn btn-wa hidden sm:inline-flex">
+          <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7a11 11 0 01-4.6-4c-.4-.5-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.6l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.6.3.1.2.1.8-.1 1.5z"/></svg>
+          WhatsApp me
+        </a>
+        <button id="menu-toggle" type="button" class="flex h-11 w-11 items-center justify-center rounded-xl border border-ink/10 bg-white lg:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <i data-lucide="menu" class="icon-open h-5 w-5"></i>
+          <i data-lucide="x" class="icon-close hidden h-5 w-5"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu lg:hidden" data-open="false" hidden>
+      <ul class="mx-auto max-w-7xl space-y-1 px-5 pb-5 pt-1 sm:px-8">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#properties" class="mobile-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+        <li class="pt-3">
+          <a href="#contact" data-whatsapp class="btn btn-wa btn-lg w-full">
+            <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7a11 11 0 01-4.6-4c-.4-.5-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.6l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.6.3.1.2.1.8-.1 1.5z"/></svg>
+            WhatsApp me
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero relative overflow-hidden pt-[64px]">
+      <div class="mx-auto grid max-w-7xl items-center gap-8 px-5 pb-16 pt-6 sm:px-8 lg:grid-cols-12 lg:gap-8 lg:pb-20 lg:pt-8">
+        <div class="lg:col-span-7">
+          <p class="hero-in hero-d1 inline-flex items-center gap-2 rounded-full border border-pine/15 bg-white px-4 py-2 text-sm font-medium text-pine">
+            <i data-lucide="map-pin" class="h-4 w-4"></i>
+            Buy, sell and rent across Pune and nearby areas
+          </p>
+          <h1 class="hero-in hero-d2 mt-5 max-w-2xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-[3.4rem]">
+            The right property, with someone who knows the neighbourhood.
+          </h1>
+          <p class="hero-in hero-d3 mt-4 max-w-xl text-lg leading-relaxed text-ink/70">
+            Carefully selected options, site visits arranged around your schedule, and one consultant by your side from first call to final negotiation.
+          </p>
+          <div class="hero-in hero-d4 mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#properties" class="btn btn-primary btn-lg">
+              Browse properties
+              <i data-lucide="arrow-down-right" class="h-4 w-4"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              <i data-lucide="phone" class="h-4 w-4"></i>
+              Talk to me
+            </a>
+          </div>
+          <ul class="hero-in hero-d5 mt-7 flex flex-wrap gap-2" aria-label="Areas covered">
+            <li class="chip">Pune</li>
+            <li class="chip">Wakad</li>
+            <li class="chip">Tathawade</li>
+            <li class="chip">Hinjawadi</li>
+            <li class="chip">Punawale</li>
+          </ul>
+        </div>
+
+        <div class="hero-in hero-d3 hero-visual relative mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-md lg:justify-self-end">
+          <div class="arch-frame">
+            <img src="assets/photo-7.jpg"
+                 alt="Modern residential house with large windows at dusk"
+                 width="1200" height="1500" class="h-full w-full object-cover" fetchpriority="high">
+          </div>
+          <div class="float-note">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brass/20 text-brass-deep">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>
+            </span>
+            <p class="text-sm font-semibold leading-snug">Site visits arranged<br><span class="font-normal text-ink/60">around your schedule</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH PANEL ============ -->
+    <section id="search" class="relative z-10 -mt-10 px-5 sm:px-8 lg:-mt-14" aria-label="Search properties">
+      <form id="search-form" class="search-panel mx-auto max-w-6xl" novalidate>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:items-end">
+          <div>
+            <label for="s-purpose" class="field-label">Looking for</label>
+            <select id="s-purpose" class="field">
+              <option value="any">Any</option>
+              <option value="buy">Buy</option>
+              <option value="rent">Rent</option>
+              <option value="sell">Sell</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-type" class="field-label">Property type</label>
+            <select id="s-type" class="field">
+              <option value="any">Any</option>
+              <option value="apartment">Apartment</option>
+              <option value="villa">Villa</option>
+              <option value="plot">Plot</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-location" class="field-label">Location</label>
+            <select id="s-location" class="field">
+              <option value="any">Any</option>
+              <option value="pune">Pune</option>
+              <option value="wakad">Wakad</option>
+              <option value="tathawade">Tathawade</option>
+              <option value="hinjawadi">Hinjawadi</option>
+              <option value="punawale">Punawale</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-budget" class="field-label">Budget</label>
+            <select id="s-budget" class="field">
+              <option value="any">Any</option>
+              <option value="30-50">₹30L to ₹50L</option>
+              <option value="50-75">₹50L to ₹75L</option>
+              <option value="75-100">₹75L to ₹1Cr</option>
+              <option value="100+">₹1Cr and above</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg w-full sm:col-span-2 lg:col-span-1">
+            <i data-lucide="search" class="h-4 w-4"></i>
+            Search
+          </button>
+        </div>
+        <p class="mt-4 text-sm text-ink/60">Tell me what you are looking for and I will help you shortlist suitable options.</p>
+      </form>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
+        <div class="relative" data-reveal>
+          <div class="about-frame">
+            <img src="assets/photo-6.jpg"
+                 alt="Detached home with a landscaped front garden"
+                 width="1200" height="900" loading="lazy" class="h-full w-full object-cover">
+          </div>
+          <!-- TODO: replace this image with a portrait of the consultant: assets/images/consultant.jpg -->
+        </div>
+
+        <div data-reveal data-delay="1">
+          <span class="eyebrow">About me</span>
+          <h2 class="section-title mt-3">One consultant, from first call to final handover.</h2>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink/70">
+            I work one-on-one with buyers, sellers and tenants. From finding the right property to coordinating site visits and supporting negotiation, you get personal guidance at every step.
+          </p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex gap-4">
+              <span class="icon-tile"><i data-lucide="user-check" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Personal guidance</h3>
+                <p class="text-ink/65">You deal with one person who knows your requirements.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="icon-tile"><i data-lucide="messages-square" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Transparent communication</h3>
+                <p class="text-ink/65">Clear updates on options, visits and next steps.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="icon-tile"><i data-lucide="map" class="h-5 w-5"></i></span>
+              <div>
+                <h3 class="font-display text-lg font-semibold">Local market knowledge</h3>
+                <p class="text-ink/65">Focused on Pune, Wakad, Tathawade, Hinjawadi and Punawale.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-lg mt-9">
+            Let's talk
+            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROPERTIES ============ -->
+    <section id="properties" class="section bg-white">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between" data-reveal>
+          <div class="max-w-2xl">
+            <span class="eyebrow">Projects</span>
+            <h2 class="section-title mt-3">Featured properties</h2>
+            <p class="mt-3 text-lg text-ink/70">Selected options based on location, budget and lifestyle.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter properties">
+            <button type="button" class="filter-pill is-active" data-filter="any" aria-pressed="true">All</button>
+            <button type="button" class="filter-pill" data-filter="buy" aria-pressed="false">Buy</button>
+            <button type="button" class="filter-pill" data-filter="rent" aria-pressed="false">Rent</button>
+            <button type="button" id="reset-filters" class="ml-1 inline-flex items-center gap-1.5 text-sm font-semibold text-pine underline-offset-4 hover:underline">
+              <i data-lucide="rotate-ccw" class="h-4 w-4"></i>
+              Reset filters
+            </button>
+          </div>
+        </div>
+
+        <!--<p class="mt-5 flex items-start gap-2 rounded-xl bg-brass/10 px-4 py-2.5 text-sm text-brass-deep" data-reveal>
+          <i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0"></i>
+          These are sample listings with placeholder prices and details. Replace them with your real inventory.
+        </p>-->
+
+        <p id="result-count" class="mt-4 text-sm font-medium text-ink/60" aria-live="polite"></p>
+
+        <div id="property-grid" class="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 -->
+          <article class="prop-card" data-purpose="buy" data-type="apartment" data-location="wakad" data-budget="75-100" data-reveal>
+            <div class="prop-media">
+              <img src="assets/photo-4.jpg"
+                   alt="Bright apartment living room with sofa and large window" width="900" height="675" loading="lazy">
+              <span class="tag tag-light">Sample</span>
+              <span class="price-badge">₹85 L</span>
+            </div>
+            <div class="prop-body">
+              <p class="meta-loc"><i data-lucide="map-pin" class="h-4 w-4"></i>Wakad, Pune</p>
+              <h3 class="prop-title">3 BHK apartment</h3>
+              <ul class="prop-specs">
+                <li><i data-lucide="bed-double" class="h-4 w-4"></i>3 beds</li>
+                <li><i data-lucide="bath" class="h-4 w-4"></i>3 baths</li>
+                <li><i data-lucide="ruler" class="h-4 w-4"></i>1,150 sq ft</li>
+              </ul>
+              <a href="#contact" class="prop-link" data-enquire="3 BHK apartment, Wakad" data-interest="Buy" data-area="Wakad">
+                Enquire <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="prop-card" data-purpose="buy" data-type="apartment" data-location="tathawade" data-budget="50-75" data-reveal data-delay="1">
+            <div class="prop-media">
+              <img src="assets/photo-3.jpg"
+                   alt="Cosy apartment interior with wooden floor and natural light" width="900" height="675" loading="lazy">
+              <span class="tag tag-light">Sample</span>
+              <span class="price-badge">₹68 L</span>
+            </div>
+            <div class="prop-body">
+              <p class="meta-loc"><i data-lucide="map-pin" class="h-4 w-4"></i>Tathawade, Pune</p>
+              <h3 class="prop-title">2 BHK apartment</h3>
+              <ul class="prop-specs">
+                <li><i data-lucide="bed-double" class="h-4 w-4"></i>2 beds</li>
+                <li><i data-lucide="bath" class="h-4 w-4"></i>2 baths</li>
+                <li><i data-lucide="ruler" class="h-4 w-4"></i>880 sq ft</li>
+              </ul>
+              <a href="#contact" class="prop-link" data-enquire="2 BHK apartment, Tathawade" data-interest="Buy" data-area="Tathawade">
+                Enquire <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="prop-card" data-purpose="buy" data-type="villa" data-location="hinjawadi" data-budget="100+" data-reveal data-delay="2">
+            <div class="prop-media">
+              <img src="assets/photo-8.jpg"
+                   alt="Contemporary villa with a swimming pool in the garden" width="900" height="675" loading="lazy">
+              <span class="tag tag-light">Sample</span>
+              <span class="price-badge">₹1.4 Cr</span>
+            </div>
+            <div class="prop-body">
+              <p class="meta-loc"><i data-lucide="map-pin" class="h-4 w-4"></i>Hinjawadi, Pune</p>
+              <h3 class="prop-title">Row villa</h3>
+              <ul class="prop-specs">
+                <li><i data-lucide="bed-double" class="h-4 w-4"></i>4 beds</li>
+                <li><i data-lucide="bath" class="h-4 w-4"></i>4 baths</li>
+                <li><i data-lucide="ruler" class="h-4 w-4"></i>2,200 sq ft</li>
+              </ul>
+              <a href="#contact" class="prop-link" data-enquire="Row villa, Hinjawadi" data-interest="Buy" data-area="Hinjawadi">
+                Enquire <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="prop-card" data-purpose="buy" data-type="plot" data-location="punawale" data-budget="30-50" data-reveal>
+            <div class="prop-media">
+              <img src="assets/photo-2.jpg"
+                   alt="Open green land parcel under a clear sky" width="900" height="675" loading="lazy">
+              <span class="tag tag-light">Sample</span>
+              <span class="price-badge">₹45 L</span>
+            </div>
+            <div class="prop-body">
+              <p class="meta-loc"><i data-lucide="map-pin" class="h-4 w-4"></i>Punawale, Pune</p>
+              <h3 class="prop-title">Residential plot</h3>
+              <ul class="prop-specs">
+                <li><i data-lucide="ruler" class="h-4 w-4"></i>1,500 sq ft</li>
+                <li><i data-lucide="trees" class="h-4 w-4"></i>Open plot</li>
+              </ul>
+              <a href="#contact" class="prop-link" data-enquire="Residential plot, Punawale" data-interest="Buy" data-area="Punawale">
+                Enquire <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="prop-card" data-purpose="buy" data-type="commercial" data-location="hinjawadi" data-budget="75-100" data-reveal data-delay="1">
+            <div class="prop-media">
+              <img src="assets/photo-1.jpg"
+                   alt="Glass-fronted commercial office building" width="900" height="675" loading="lazy">
+              <span class="tag tag-light">Sample</span>
+              <span class="price-badge">₹90 L</span>
+            </div>
+            <div class="prop-body">
+              <p class="meta-loc"><i data-lucide="map-pin" class="h-4 w-4"></i>Hinjawadi, Pune</p>
+              <h3 class="prop-title">Office space</h3>
+              <ul class="prop-specs">
+                <li><i data-lucide="ruler" class="h-4 w-4"></i>720 sq ft</li>
+                <li><i data-lucide="building-2" class="h-4 w-4"></i>Commercial</li>
+              </ul>
+              <a href="#contact" class="prop-link" data-enquire="Office space, Hinjawadi" data-interest="Buy" data-area="Hinjawadi">
+                Enquire <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="prop-card" data-purpose="rent" data-type="apartment" data-location="wakad" data-budget="any" data-reveal data-delay="2">
+            <div class="prop-media">
+              <img src="assets/photo-5.jpg"
+                   alt="Furnished apartment with a bedroom and tidy living area" width="900" height="675" loading="lazy">
+              <span class="tag tag-light">Sample</span>
+              <span class="price-badge">₹28,000 / month</span>
+            </div>
+            <div class="prop-body">
+              <p class="meta-loc"><i data-lucide="map-pin" class="h-4 w-4"></i>Wakad, Pune</p>
+              <h3 class="prop-title">2 BHK for rent</h3>
+              <ul class="prop-specs">
+                <li><i data-lucide="bed-double" class="h-4 w-4"></i>2 beds</li>
+                <li><i data-lucide="bath" class="h-4 w-4"></i>2 baths</li>
+                <li><i data-lucide="key-round" class="h-4 w-4"></i>Rental</li>
+              </ul>
+              <a href="#contact" class="prop-link" data-enquire="2 BHK for rent, Wakad" data-interest="Rent" data-area="Wakad">
+                Enquire <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div id="empty-state" class="mt-8 hidden rounded-3xl border border-dashed border-ink/20 bg-mist px-6 py-12 text-center" role="status">
+          <span class="icon-tile mx-auto"><i data-lucide="search-x" class="h-5 w-5"></i></span>
+          <h3 id="empty-title" class="mt-4 font-display text-xl font-semibold">No matching properties yet</h3>
+          <p id="empty-text" class="mx-auto mt-2 max-w-md text-ink/65">Try a different combination, or tell me what you need and I will look for it.</p>
+          <a href="#contact" class="btn btn-primary mt-6">Send an enquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section section-services">
+      <div class="svc-wrap mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="svc-intro" data-reveal>
+          <span class="eyebrow">Services</span>
+          <h2 class="section-title mt-3">Property help for every stage</h2>
+          <p class="mt-4 max-w-md text-lg text-ink/70">Whether you are buying your first home, selling an existing one or looking for a rental, you get the same personal attention.</p>
+          <a href="#contact" class="btn btn-primary btn-lg mt-6">Start with a conversation <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+        </div>
+
+        <div class="svc-grid">
+          <article class="svc-card" data-reveal>
+            <span class="svc-num" aria-hidden="true">01</span>
+            <span class="svc-icon"><i data-lucide="house" class="h-6 w-6"></i></span>
+            <h3>Buying a property</h3>
+            <p>Shortlists matched to your budget and area, site visits, and support through negotiation.</p>
+            <span class="svc-arrow" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+          </article>
+          <article class="svc-card" data-reveal data-delay="1">
+            <span class="svc-num" aria-hidden="true">02</span>
+            <span class="svc-icon"><i data-lucide="tag" class="h-6 w-6"></i></span>
+            <h3>Selling a property</h3>
+            <p>Present your property well, reach genuine buyers and coordinate viewings without the back and forth.</p>
+            <span class="svc-arrow" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+          </article>
+          <article class="svc-card" data-reveal data-delay="2">
+            <span class="svc-num" aria-hidden="true">03</span>
+            <span class="svc-icon"><i data-lucide="key-round" class="h-6 w-6"></i></span>
+            <h3>Renting a property</h3>
+            <p>Find a rental that suits your commute and lifestyle, whether you are a tenant or an owner.</p>
+            <span class="svc-arrow" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+          </article>
+          <article class="svc-card" data-reveal data-delay="3">
+            <span class="svc-num" aria-hidden="true">04</span>
+            <span class="svc-icon"><i data-lucide="trending-up" class="h-6 w-6"></i></span>
+            <h3>Investment guidance</h3>
+            <p>Talk through locations and property types before you commit, with local market context.</p>
+            <span class="svc-arrow" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="process" class="section section-process bg-white">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <span class="eyebrow">Process</span>
+          <h2 class="section-title mt-3">How it works</h2>
+          <p class="mt-3 text-lg text-ink/70">A simple path from your first message to a decision you feel good about.</p>
+        </div>
+
+        <ol class="steps mt-9">
+          <li class="step" data-reveal>
+            <span class="step-dot">1</span>
+            <span class="step-ico"><i data-lucide="message-square-text" class="h-6 w-6"></i></span>
+            <h3>Share what you need</h3>
+            <p>Tell me your budget, preferred areas and the kind of property you want.</p>
+          </li>
+          <li class="step" data-reveal data-delay="1">
+            <span class="step-dot">2</span>
+            <span class="step-ico"><i data-lucide="list-checks" class="h-6 w-6"></i></span>
+            <h3>Get a shortlist</h3>
+            <p>I select options that fit, so you compare a few good ones instead of dozens.</p>
+          </li>
+          <li class="step" data-reveal data-delay="2">
+            <span class="step-dot">3</span>
+            <span class="step-ico"><i data-lucide="map-pinned" class="h-6 w-6"></i></span>
+            <h3>Visit the sites</h3>
+            <p>I coordinate visits at times that work for you and your family.</p>
+          </li>
+          <li class="step" data-reveal data-delay="3">
+            <span class="step-dot">4</span>
+            <span class="step-ico"><i data-lucide="handshake" class="h-6 w-6"></i></span>
+            <h3>Negotiate and decide</h3>
+            <p>I support the negotiation so you can make the final call with confidence.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ WHY ME ============ -->
+    <section id="why" class="section section-why">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="why-panel" data-reveal>
+          <div class="why-head">
+            <div>
+              <span class="eyebrow eyebrow-light">Why me</span>
+              <h2 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Why people work with me</h2>
+            </div>
+            <p class="why-lead">Property decisions are big. You should know who you are dealing with and what happens next.</p>
+          </div>
+          <ul class="why-grid">
+            <li class="why-item">
+              <span class="why-ico"><i data-lucide="user-round-check" class="h-6 w-6"></i></span>
+              <h3>One point of contact</h3>
+              <p>Everything is handled by one person who knows your requirements.</p>
+            </li>
+            <li class="why-item">
+              <span class="why-ico"><i data-lucide="eye" class="h-6 w-6"></i></span>
+              <h3>Transparent communication</h3>
+              <p>Straightforward updates on every option and every step.</p>
+            </li>
+            <li class="why-item">
+              <span class="why-ico"><i data-lucide="map-pinned" class="h-6 w-6"></i></span>
+              <h3>Local market knowledge</h3>
+              <p>Familiar with the neighbourhoods around Wakad, Tathawade, Hinjawadi and Punawale.</p>
+            </li>
+            <li class="why-item">
+              <span class="why-ico"><i data-lucide="handshake" class="h-6 w-6"></i></span>
+              <h3>Support through negotiation</h3>
+              <p>Help in the conversations that decide the final terms.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section bg-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-4" data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title mt-3">Common questions</h2>
+        </div>
+        <div class="space-y-3 lg:col-span-8" data-reveal data-delay="1">
+          <details class="faq">
+            <summary>
+              How do I book a site visit?
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5"></i>
+            </summary>
+            <p>Send an enquiry or message me on WhatsApp with the properties you like. We will agree on a time that suits you.</p>
+          </details>
+          <details class="faq">
+            <summary>
+              Which areas do you cover?
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5"></i>
+            </summary>
+            <p>Pune, Wakad, Tathawade, Hinjawadi and Punawale.</p>
+          </details>
+          <details class="faq">
+            <summary>
+              Can you help me sell or rent out my property?
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5"></i>
+            </summary>
+            <p>Yes. Share the location and type of property in the enquiry form and I will get back to you with the next steps.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="contact-panel" data-reveal>
+          <div class="contact-grid grid gap-8 lg:grid-cols-12 lg:gap-12">
+            <div class="contact-info lg:col-span-5">
+              <span class="eyebrow eyebrow-light">Contact</span>
+              <h2 class="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Looking for the right property?</h2>
+              <p class="mt-3 text-lg text-white/75">Let's discuss what you are looking for.</p>
+
+              <!-- Placeholder contact details: replace with real ones -->
+              <ul class="mt-6 space-y-4">
+                <li class="flex items-start gap-4">
+                  <span class="contact-icon"><i data-lucide="phone" class="h-5 w-5"></i></span>
+                  <div><p class="text-sm text-white/60">Phone</p><a href="tel:+910000000000" class="font-semibold hover:underline">+91 00000 00000</a></div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="contact-icon"><i data-lucide="message-circle" class="h-5 w-5"></i></span>
+                  <div><p class="text-sm text-white/60">WhatsApp</p><a href="#contact" data-whatsapp class="font-semibold hover:underline">+91 00000 00000</a></div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="contact-icon"><i data-lucide="mail" class="h-5 w-5"></i></span>
+                  <div><p class="text-sm text-white/60">Email</p><a href="mailto:hello@example.com" class="font-semibold hover:underline">hello@example.com</a></div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="contact-icon"><i data-lucide="map-pin" class="h-5 w-5"></i></span>
+                  <div><p class="text-sm text-white/60">Service area</p><p class="font-semibold">Pune, Wakad, Tathawade, Hinjawadi, Punawale</p></div>
+                </li>
+              </ul>
+
+              <div class="contact-map">
+                <iframe title="Map of Wakad, Pune" src="https://www.google.com/maps?q=Wakad,Pune&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <form id="contact-form" class="contact-form rounded-3xl bg-white p-6 text-ink sm:p-8 lg:col-span-7" novalidate>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="c-name" class="field-label">Name</label>
+                  <input id="c-name" name="name" type="text" autocomplete="name" class="field" required aria-describedby="c-name-err">
+                  <p id="c-name-err" class="field-error" role="alert"></p>
+                </div>
+                <div>
+                  <label for="c-phone" class="field-label">Phone number</label>
+                  <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" class="field" required aria-describedby="c-phone-err">
+                  <p id="c-phone-err" class="field-error" role="alert"></p>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="c-email" class="field-label">Email <span class="font-normal text-ink/50">(optional)</span></label>
+                  <input id="c-email" name="email" type="email" autocomplete="email" class="field" aria-describedby="c-email-err">
+                  <p id="c-email-err" class="field-error" role="alert"></p>
+                </div>
+                <div>
+                  <label for="c-interest" class="field-label">Interested in</label>
+                  <select id="c-interest" name="interest" class="field">
+                    <option>Buy</option><option>Sell</option><option>Rent</option><option>Investment</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="c-location" class="field-label">Preferred location</label>
+                  <select id="c-location" name="location" class="field">
+                    <option>Pune</option><option>Wakad</option><option>Tathawade</option><option>Hinjawadi</option><option>Punawale</option>
+                  </select>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="c-budget" class="field-label">Budget</label>
+                  <select id="c-budget" name="budget" class="field">
+                    <option>₹30L to ₹50L</option><option>₹50L to ₹75L</option><option>₹75L to ₹1Cr</option><option>₹1Cr and above</option>
+                  </select>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="c-message" class="field-label">Message</label>
+                  <textarea id="c-message" name="message" rows="4" class="field resize-y"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg mt-6 w-full sm:w-auto">
+                <i data-lucide="send" class="h-4 w-4"></i>
+                Send enquiry
+              </button>
+              <p id="form-status" class="mt-4 text-sm font-medium" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-ink/10 bg-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href="#home" class="flex items-center gap-2.5">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-pine text-white"><i data-lucide="house" class="h-5 w-5"></i></span>
+          <span class="font-display text-lg font-semibold">Nivaas Property Advisors</span>
+        </a>
+        <p class="mt-4 max-w-xs text-ink/65">Personal property guidance for buying, selling and renting in Pune and nearby areas.</p>
+      </div>
+      <nav aria-label="Quick links">
+        <h3 class="font-display font-semibold">Quick links</h3>
+        <ul class="mt-4 space-y-2.5 text-ink/65">
+          <li><a href="#home" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
+          <li><a href="#properties" class="footer-link">Projects</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="font-display font-semibold">Contact</h3>
+        <ul class="mt-4 space-y-2.5 text-ink/65">
+          <li><a href="tel:+910000000000" class="footer-link">+91 00000 00000</a></li>
+          <li><a href="#contact" data-whatsapp class="footer-link">WhatsApp</a></li>
+          <li><a href="mailto:hello@example.com" class="footer-link">hello@example.com</a></li>
+          <li>Pune, Maharashtra</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display font-semibold">Follow</h3>
+        <ul class="mt-4 flex gap-3">
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social" aria-label="Instagram"><i data-lucide="instagram" class="h-5 w-5"></i></a></li>
+          <li><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social" aria-label="Facebook"><i data-lucide="facebook" class="h-5 w-5"></i></a></li>
+          <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social" aria-label="LinkedIn"><i data-lucide="linkedin" class="h-5 w-5"></i></a></li>
+        </ul>
+        <!-- TODO: replace the three social links with real profile URLs -->
+      </div>
+    </div>
+    <div class="border-t border-ink/10">
+      <p class="mx-auto max-w-7x1 px-5 py-5 text-sm text-ink/55 sm:px-8">&copy; <span id="year">2026</span> Nivaas Property Advisors. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" type="button" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="h-5 w-5"></i>
+  </button>
+
+  <!-- Lucide icons (pinned version) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
